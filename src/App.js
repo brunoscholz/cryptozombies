@@ -53,9 +53,9 @@ const App = () => {
       );
 
       if (gameContract) {
-        const character = await gameContract.getMyZombie();
-        console.log('Character: ', character);
-        setCharacterNFT(character);
+        const characters = await gameContract.getZombiesByOwner();
+        console.log('Character: ', characters);
+        setCharacterNFT(characters);
       }
     };
 
