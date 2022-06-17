@@ -3,34 +3,42 @@ pragma solidity >=0.5.0 <=0.8.15;
 
 contract ZombieFactory {
 
-    event NewZombie(uint zombieId, string name, uint dna);
+  event NewZombie(uint zombieId, string name, uint dna);
 
-    uint dnaDigits = 16;
-    uint dnaModulus = 10 ** dnaDigits;
+  uint dnaDigits = 16;
+  uint dnaModulus = 10 ** dnaDigits;
 
-    struct Zombie {
-        string name;
-        uint dna;
-    }
+  struct Zombie {
+    string name;
+    uint dna;
+  }
 
-    Zombie[] public zombies;
+  Zombie[] public zombies;
 
-    // declare mappings here
+  mapping (uint => address) public zombieToOwner;
+  mapping (address => uint) ownerZombieCount;
 
-    function _createZombie(string memory _name, uint _dna) private {
-        zombies.push(Zombie(_name, _dna));
-        uint id = zombies.length - 1;
-        emit NewZombie(id, _name, _dna);
-    }
+  function _createZombie(string memory _name, uint _dna) internal {
+    zombies.push(Zombie(_name, _dna));
+    uint id = zombies.length - 1;
+    zombieToOwner[id] = msg.sender;
+    ownerZombieCount[msg.sender]++;
+    emit NewZombie(id, _name, _dna);
+  }
 
-    function _generateRandomDna(string memory _str) private view returns (uint) {
-        uint rand = uint(keccak256(abi.encodePacked(_str)));
-        return rand % dnaModulus;
-    }
+  function _generateRandomDna(string memory _str) private view returns (uint) {
+    uint rand = uint(keccak256(abi.encodePacked(_str)));
+    return rand % dnaModulus;
+  }
 
-    function createRandomZombie(string memory _name) public {
-        uint randDna = _generateRandomDna(_name);
-        _createZombie(_name, randDna);
-    }
+  function createRandomZombie(string memory _name) public {
+    require(ownerZombieCount[msg.sender] == 0);
+    uint randDna = _generateRandomDna(_name);
+    randDna = randDna - randDna % 100;
+    _createZombie(_name, randDna);
+  }
 
+  function getMyZombie() public view returns (Zombie memory) {
+
+  }
 }

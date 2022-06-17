@@ -34,6 +34,25 @@
           "type": "uint256"
         }
       ],
+      "name": "zombieToOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
       "name": "zombies",
       "outputs": [
         {
@@ -48,8 +67,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -65,29 +83,29 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"zombieId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"dna\",\"type\":\"uint256\"}],\"name\":\"NewZombie\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"}],\"name\":\"createRandomZombie\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"zombies\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"dna\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/src/truffle/contracts/ZombieFactory.sol\":\"ZombieFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/src/truffle/contracts/ZombieFactory.sol\":{\"keccak256\":\"0x06a7e4d375a59c6484a6599d49627eb82b5f44984f4166a7e716e597c7ac135e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://336635608560666f569da060eece564d9838163afc55832044d7f752015136c1\",\"dweb:/ipfs/QmZCeXAUD7eEYrX5h4VBRGebrBXmJZERVTqeUrLJpzU2cB\"]}},\"version\":1}",
-  "bytecode": "0x60806040526010600055600054600a0a60015534801561001e57600080fd5b506105218061002e6000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80632052465e1461003b5780637bff0a01146100e9575b600080fd5b6100676004803603602081101561005157600080fd5b81019080803590602001909291905050506101a4565b6040518080602001838152602001828103825284818151815260200191508051906020019080838360005b838110156100ad578082015181840152602081019050610092565b50505050905090810190601f1680156100da5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6101a2600480360360208110156100ff57600080fd5b810190808035906020019064010000000081111561011c57600080fd5b82018360208201111561012e57600080fd5b8035906020019184600183028401116401000000008311171561015057600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610270565b005b600281815481106101b457600080fd5b9060005260206000209060020201600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102605780601f1061023557610100808354040283529160200191610260565b820191906000526020600020905b81548152906001019060200180831161024357829003601f168201915b5050505050908060010154905082565b600061027b8261028b565b90506102878282610319565b5050565b600080826040516020018082805190602001908083835b602083106102c557805182526020820191506020810190506020830392506102a2565b6001836020036101000a0380198251168184511680821785525050505050509050019150506040516020818303038152906040528051906020012060001c9050600154818161031057fe5b06915050919050565b600260405180604001604052808481526020018381525090806001815401808255809150506001900390600052602060002090600202016000909190919091506000820151816000019080519060200190610375929190610440565b50602082015181600101555050600060016002805490500390507f88f026aacbbecc90c18411df4b1185fd8d9be2470f1962f192bf84a27d0704b78184846040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b838110156103ff5780820151818401526020810190506103e4565b50505050905090810190601f16801561042c5780820380516001836020036101000a031916815260200191505b5094505050505060405180910390a1505050565b828054600181600116156101000203166002900490600052602060002090601f01602090048101928261047657600085556104bd565b82601f1061048f57805160ff19168380011785556104bd565b828001600101855582156104bd579182015b828111156104bc5782518255916020019190600101906104a1565b5b5090506104ca91906104ce565b5090565b5b808211156104e75760008160009055506001016104cf565b509056fea26469706673582212207be21b83485cb7de53a4156effe18edad6a7dfce9229ee227b933871c0c3a63064736f6c63430007060033",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80632052465e1461003b5780637bff0a01146100e9575b600080fd5b6100676004803603602081101561005157600080fd5b81019080803590602001909291905050506101a4565b6040518080602001838152602001828103825284818151815260200191508051906020019080838360005b838110156100ad578082015181840152602081019050610092565b50505050905090810190601f1680156100da5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6101a2600480360360208110156100ff57600080fd5b810190808035906020019064010000000081111561011c57600080fd5b82018360208201111561012e57600080fd5b8035906020019184600183028401116401000000008311171561015057600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610270565b005b600281815481106101b457600080fd5b9060005260206000209060020201600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102605780601f1061023557610100808354040283529160200191610260565b820191906000526020600020905b81548152906001019060200180831161024357829003601f168201915b5050505050908060010154905082565b600061027b8261028b565b90506102878282610319565b5050565b600080826040516020018082805190602001908083835b602083106102c557805182526020820191506020810190506020830392506102a2565b6001836020036101000a0380198251168184511680821785525050505050509050019150506040516020818303038152906040528051906020012060001c9050600154818161031057fe5b06915050919050565b600260405180604001604052808481526020018381525090806001815401808255809150506001900390600052602060002090600202016000909190919091506000820151816000019080519060200190610375929190610440565b50602082015181600101555050600060016002805490500390507f88f026aacbbecc90c18411df4b1185fd8d9be2470f1962f192bf84a27d0704b78184846040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b838110156103ff5780820151818401526020810190506103e4565b50505050905090810190601f16801561042c5780820380516001836020036101000a031916815260200191505b5094505050505060405180910390a1505050565b828054600181600116156101000203166002900490600052602060002090601f01602090048101928261047657600085556104bd565b82601f1061048f57805160ff19168380011785556104bd565b828001600101855582156104bd579182015b828111156104bc5782518255916020019190600101906104a1565b5b5090506104ca91906104ce565b5090565b5b808211156104e75760008160009055506001016104cf565b509056fea26469706673582212207be21b83485cb7de53a4156effe18edad6a7dfce9229ee227b933871c0c3a63064736f6c63430007060033",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"zombieId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"dna\",\"type\":\"uint256\"}],\"name\":\"NewZombie\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"}],\"name\":\"createRandomZombie\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"zombieToOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"zombies\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"dna\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/src/truffle/contracts/ZombieFactory.sol\":\"ZombieFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/src/truffle/contracts/ZombieFactory.sol\":{\"keccak256\":\"0x803e8c659dd6e6f54cb8c4ffc9d6ceb519644ab87340816ee3f63e4a1b24acb0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f30352b0e25f5d42df438ca95ba87ef1c7ba7af02452b4f3c51c1aff600bbba9\",\"dweb:/ipfs/QmPGiB2fgULdd1XimCY5dVMt55RnGQ9z4vhgyMHvSyoYC6\"]}},\"version\":1}",
+  "bytecode": "0x60806040526010600055600054600a0a60015534801561001e57600080fd5b506106b38061002e6000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80632052465e14610046578063528b7b8f146100f45780637bff0a011461014c575b600080fd5b6100726004803603602081101561005c57600080fd5b8101908080359060200190929190505050610207565b6040518080602001838152602001828103825284818151815260200191508051906020019080838360005b838110156100b857808201518184015260208101905061009d565b50505050905090810190601f1680156100e55780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6101206004803603602081101561010a57600080fd5b81019080803590602001909291905050506102d3565b604051808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6102056004803603602081101561016257600080fd5b810190808035906020019064010000000081111561017f57600080fd5b82018360208201111561019157600080fd5b803590602001918460018302840111640100000000831117156101b357600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610306565b005b6002818154811061021757600080fd5b9060005260206000209060020201600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102c35780601f10610298576101008083540402835291602001916102c3565b820191906000526020600020905b8154815290600101906020018083116102a657829003601f168201915b5050505050908060010154905082565b60036020528060005260406000206000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541461035257600080fd5b600061035d8261037c565b90506064818161036957fe5b0681039050610378828261040a565b5050565b600080826040516020018082805190602001908083835b602083106103b65780518252602082019150602081019050602083039250610393565b6001836020036101000a0380198251168184511680821785525050505050509050019150506040516020818303038152906040528051906020012060001c9050600154818161040157fe5b06915050919050565b6002604051806040016040528084815260200183815250908060018154018082558091505060019003906000526020600020906002020160009091909190915060008201518160000190805190602001906104669291906105d2565b5060208201518160010155505060006001600280549050039050336003600083815260200190815260200160002060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600081548092919060010191905055507f88f026aacbbecc90c18411df4b1185fd8d9be2470f1962f192bf84a27d0704b78184846040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b83811015610591578082015181840152602081019050610576565b50505050905090810190601f1680156105be5780820380516001836020036101000a031916815260200191505b5094505050505060405180910390a1505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282610608576000855561064f565b82601f1061062157805160ff191683800117855561064f565b8280016001018555821561064f579182015b8281111561064e578251825591602001919060010190610633565b5b50905061065c9190610660565b5090565b5b80821115610679576000816000905550600101610661565b509056fea26469706673582212207888f769729b4ebe50880291bce25dc4f84b54810fb38b1c7b23e8dde838ca4264736f6c63430007060033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80632052465e14610046578063528b7b8f146100f45780637bff0a011461014c575b600080fd5b6100726004803603602081101561005c57600080fd5b8101908080359060200190929190505050610207565b6040518080602001838152602001828103825284818151815260200191508051906020019080838360005b838110156100b857808201518184015260208101905061009d565b50505050905090810190601f1680156100e55780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6101206004803603602081101561010a57600080fd5b81019080803590602001909291905050506102d3565b604051808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6102056004803603602081101561016257600080fd5b810190808035906020019064010000000081111561017f57600080fd5b82018360208201111561019157600080fd5b803590602001918460018302840111640100000000831117156101b357600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610306565b005b6002818154811061021757600080fd5b9060005260206000209060020201600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102c35780601f10610298576101008083540402835291602001916102c3565b820191906000526020600020905b8154815290600101906020018083116102a657829003601f168201915b5050505050908060010154905082565b60036020528060005260406000206000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541461035257600080fd5b600061035d8261037c565b90506064818161036957fe5b0681039050610378828261040a565b5050565b600080826040516020018082805190602001908083835b602083106103b65780518252602082019150602081019050602083039250610393565b6001836020036101000a0380198251168184511680821785525050505050509050019150506040516020818303038152906040528051906020012060001c9050600154818161040157fe5b06915050919050565b6002604051806040016040528084815260200183815250908060018154018082558091505060019003906000526020600020906002020160009091909190915060008201518160000190805190602001906104669291906105d2565b5060208201518160010155505060006001600280549050039050336003600083815260200190815260200160002060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600081548092919060010191905055507f88f026aacbbecc90c18411df4b1185fd8d9be2470f1962f192bf84a27d0704b78184846040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b83811015610591578082015181840152602081019050610576565b50505050905090810190601f1680156105be5780820380516001836020036101000a031916815260200191505b5094505050505060405180910390a1505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282610608576000855561064f565b82601f1061062157805160ff191683800117855561064f565b8280016001018555821561064f579182015b8281111561064e578251825591602001919060010190610633565b5b50905061065c9190610660565b5090565b5b80821115610679576000816000905550600101610661565b509056fea26469706673582212207888f769729b4ebe50880291bce25dc4f84b54810fb38b1c7b23e8dde838ca4264736f6c63430007060033",
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [],
-  "sourceMap": "67:818:1:-:0;;;174:2;157:19;;206:9;;200:2;:15;182:33;;67:818;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "67:818:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;288:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;730:152;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;288:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;730:152::-;796:12;811:25;830:5;811:18;:25::i;:::-;796:40;;846:29;860:5;867:7;846:13;:29::i;:::-;730:152;;:::o;546:178::-;616:4;632:9;676:4;659:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;649:33;;;;;;644:39;;632:51;;707:10;;700:4;:17;;;;;;693:24;;;546:178;;;:::o;348:192::-;421:7;434:19;;;;;;;;441:5;434:19;;;;448:4;434:19;;;421:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;464:7;491:1;474:7;:14;;;;:18;464:28;;507:26;517:2;521:5;528:4;507:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;348:192;;;:::o;-1:-1:-1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.5.0 <=0.8.15;\n\ncontract ZombieFactory {\n\n    event NewZombie(uint zombieId, string name, uint dna);\n\n    uint dnaDigits = 16;\n    uint dnaModulus = 10 ** dnaDigits;\n\n    struct Zombie {\n        string name;\n        uint dna;\n    }\n\n    Zombie[] public zombies;\n\n    // declare mappings here\n\n    function _createZombie(string memory _name, uint _dna) private {\n        zombies.push(Zombie(_name, _dna));\n        uint id = zombies.length - 1;\n        emit NewZombie(id, _name, _dna);\n    }\n\n    function _generateRandomDna(string memory _str) private view returns (uint) {\n        uint rand = uint(keccak256(abi.encodePacked(_str)));\n        return rand % dnaModulus;\n    }\n\n    function createRandomZombie(string memory _name) public {\n        uint randDna = _generateRandomDna(_name);\n        _createZombie(_name, randDna);\n    }\n\n}\n",
+  "sourceMap": "67:985:0:-:0;;;170:2;153:19;;200:9;;194:2;:15;176:33;;67:985;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "67:985:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;268:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;296:46;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;820:229;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;268:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;296:46::-;;;;;;;;;;;;;;;;;;;;;;:::o;820:229::-;922:1;890:16;:28;907:10;890:28;;;;;;;;;;;;;;;;:33;882:42;;;;;;930:12;945:25;964:5;945:18;:25::i;:::-;930:40;;1006:3;996:7;:13;;;;;;986:7;:23;976:33;;1015:29;1029:5;1036:7;1015:13;:29::i;:::-;820:229;;:::o;648:168::-;718:4;730:9;774:4;757:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;747:33;;;;;;742:39;;730:51;;801:10;;794:4;:17;;;;;;787:24;;;648:168;;;:::o;393:251::-;463:7;476:19;;;;;;;;483:5;476:19;;;;490:4;476:19;;;463:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;502:7;529:1;512:7;:14;;;;:18;502:28;;556:10;536:13;:17;550:2;536:17;;;;;;;;;;;;:30;;;;;;;;;;;;;;;;;;572:16;:28;589:10;572:28;;;;;;;;;;;;;;;;:30;;;;;;;;;;;;;613:26;623:2;627:5;634:4;613:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;393:251;;;:::o;-1:-1:-1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.5.0 <=0.8.15;\n\ncontract ZombieFactory {\n\n  event NewZombie(uint zombieId, string name, uint dna);\n\n  uint dnaDigits = 16;\n  uint dnaModulus = 10 ** dnaDigits;\n\n  struct Zombie {\n    string name;\n    uint dna;\n  }\n\n  Zombie[] public zombies;\n\n  mapping (uint => address) public zombieToOwner;\n  mapping (address => uint) ownerZombieCount;\n\n  function _createZombie(string memory _name, uint _dna) internal {\n    zombies.push(Zombie(_name, _dna));\n    uint id = zombies.length - 1;\n    zombieToOwner[id] = msg.sender;\n    ownerZombieCount[msg.sender]++;\n    emit NewZombie(id, _name, _dna);\n  }\n\n  function _generateRandomDna(string memory _str) private view returns (uint) {\n    uint rand = uint(keccak256(abi.encodePacked(_str)));\n    return rand % dnaModulus;\n  }\n\n  function createRandomZombie(string memory _name) public {\n    require(ownerZombieCount[msg.sender] == 0);\n    uint randDna = _generateRandomDna(_name);\n    randDna = randDna - randDna % 100;\n    _createZombie(_name, randDna);\n  }\n\n}\n",
   "sourcePath": "/home/bruno/src/cryptozombies/src/truffle/contracts/ZombieFactory.sol",
   "ast": {
     "absolutePath": "project:/src/truffle/contracts/ZombieFactory.sol",
     "exportedSymbols": {
       "ZombieFactory": [
-        130
+        135
       ]
     },
-    "id": 131,
+    "id": 136,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 34,
+        "id": 1,
         "literals": [
           "solidity",
           ">=",
@@ -98,7 +116,7 @@
           ".15"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:33:1"
+        "src": "32:33:0"
       },
       {
         "abstract": false,
@@ -106,31 +124,31 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 130,
+        "id": 135,
         "linearizedBaseContracts": [
-          130
+          135
         ],
         "name": "ZombieFactory",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "anonymous": false,
-            "id": 42,
+            "id": 9,
             "name": "NewZombie",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 41,
+              "id": 8,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 36,
+                  "id": 3,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "zombieId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 42,
-                  "src": "113:13:1",
+                  "scope": 9,
+                  "src": "111:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -138,10 +156,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 35,
+                    "id": 2,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "113:4:1",
+                    "src": "111:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -151,13 +169,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 38,
+                  "id": 5,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 42,
-                  "src": "128:11:1",
+                  "scope": 9,
+                  "src": "126:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -165,10 +183,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 37,
+                    "id": 4,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "128:6:1",
+                    "src": "126:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -178,13 +196,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 40,
+                  "id": 7,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "dna",
                   "nodeType": "VariableDeclaration",
-                  "scope": 42,
-                  "src": "141:8:1",
+                  "scope": 9,
+                  "src": "139:8:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -192,10 +210,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39,
+                    "id": 6,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "141:4:1",
+                    "src": "139:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -204,18 +222,18 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "112:38:1"
+              "src": "110:38:0"
             },
-            "src": "97:54:1"
+            "src": "95:54:0"
           },
           {
             "constant": false,
-            "id": 45,
+            "id": 12,
             "mutability": "mutable",
             "name": "dnaDigits",
             "nodeType": "VariableDeclaration",
-            "scope": 130,
-            "src": "157:19:1",
+            "scope": 135,
+            "src": "153:19:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -223,10 +241,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 43,
+              "id": 10,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "157:4:1",
+              "src": "153:4:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -234,14 +252,14 @@
             },
             "value": {
               "hexValue": "3136",
-              "id": 44,
+              "id": 11,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "174:2:1",
+              "src": "170:2:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_16_by_1",
                 "typeString": "int_const 16"
@@ -252,12 +270,12 @@
           },
           {
             "constant": false,
-            "id": 50,
+            "id": 17,
             "mutability": "mutable",
             "name": "dnaModulus",
             "nodeType": "VariableDeclaration",
-            "scope": 130,
-            "src": "182:33:1",
+            "scope": 135,
+            "src": "176:33:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -265,10 +283,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 46,
+              "id": 13,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "182:4:1",
+              "src": "176:4:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -279,21 +297,21 @@
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
               },
-              "id": 49,
+              "id": 16,
               "isConstant": false,
               "isLValue": false,
               "isPure": false,
               "lValueRequested": false,
               "leftExpression": {
                 "hexValue": "3130",
-                "id": 47,
+                "id": 14,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
                 "kind": "number",
                 "lValueRequested": false,
                 "nodeType": "Literal",
-                "src": "200:2:1",
+                "src": "194:2:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_rational_10_by_1",
                   "typeString": "int_const 10"
@@ -303,18 +321,18 @@
               "nodeType": "BinaryOperation",
               "operator": "**",
               "rightExpression": {
-                "id": 48,
+                "id": 15,
                 "name": "dnaDigits",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 45,
-                "src": "206:9:1",
+                "referencedDeclaration": 12,
+                "src": "200:9:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
-              "src": "200:15:1",
+              "src": "194:15:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -324,16 +342,16 @@
           },
           {
             "canonicalName": "ZombieFactory.Zombie",
-            "id": 55,
+            "id": 22,
             "members": [
               {
                 "constant": false,
-                "id": 52,
+                "id": 19,
                 "mutability": "mutable",
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 55,
-                "src": "246:11:1",
+                "scope": 22,
+                "src": "234:11:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -341,10 +359,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 51,
+                  "id": 18,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "246:6:1",
+                  "src": "234:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -354,12 +372,12 @@
               },
               {
                 "constant": false,
-                "id": 54,
+                "id": 21,
                 "mutability": "mutable",
                 "name": "dna",
                 "nodeType": "VariableDeclaration",
-                "scope": 55,
-                "src": "267:8:1",
+                "scope": 22,
+                "src": "251:8:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -367,10 +385,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 53,
+                  "id": 20,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "267:4:1",
+                  "src": "251:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -381,52 +399,144 @@
             ],
             "name": "Zombie",
             "nodeType": "StructDefinition",
-            "scope": 130,
-            "src": "222:60:1",
+            "scope": 135,
+            "src": "214:50:0",
             "visibility": "public"
           },
           {
             "constant": false,
             "functionSelector": "2052465e",
-            "id": 58,
+            "id": 25,
             "mutability": "mutable",
             "name": "zombies",
             "nodeType": "VariableDeclaration",
-            "scope": 130,
-            "src": "288:23:1",
+            "scope": 135,
+            "src": "268:23:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_Zombie_$55_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_Zombie_$22_storage_$dyn_storage",
               "typeString": "struct ZombieFactory.Zombie[]"
             },
             "typeName": {
               "baseType": {
-                "id": 56,
+                "id": 23,
                 "name": "Zombie",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 55,
-                "src": "288:6:1",
+                "referencedDeclaration": 22,
+                "src": "268:6:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Zombie_$55_storage_ptr",
+                  "typeIdentifier": "t_struct$_Zombie_$22_storage_ptr",
                   "typeString": "struct ZombieFactory.Zombie"
                 }
               },
-              "id": 57,
+              "id": 24,
               "nodeType": "ArrayTypeName",
-              "src": "288:8:1",
+              "src": "268:8:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Zombie_$55_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_Zombie_$22_storage_$dyn_storage_ptr",
                 "typeString": "struct ZombieFactory.Zombie[]"
               }
             },
             "visibility": "public"
           },
           {
+            "constant": false,
+            "functionSelector": "528b7b8f",
+            "id": 29,
+            "mutability": "mutable",
+            "name": "zombieToOwner",
+            "nodeType": "VariableDeclaration",
+            "scope": 135,
+            "src": "296:46:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+              "typeString": "mapping(uint256 => address)"
+            },
+            "typeName": {
+              "id": 28,
+              "keyType": {
+                "id": 26,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "305:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "296:25:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+                "typeString": "mapping(uint256 => address)"
+              },
+              "valueType": {
+                "id": 27,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "313:7:0",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 33,
+            "mutability": "mutable",
+            "name": "ownerZombieCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 135,
+            "src": "346:42:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 32,
+              "keyType": {
+                "id": 30,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "355:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "346:25:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 31,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "366:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
             "body": {
-              "id": 87,
+              "id": 75,
               "nodeType": "Block",
-              "src": "411:129:1",
+              "src": "457:187:0",
               "statements": [
                 {
                   "expression": {
@@ -434,24 +544,24 @@
                       {
                         "arguments": [
                           {
-                            "id": 69,
+                            "id": 44,
                             "name": "_name",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 60,
-                            "src": "441:5:1",
+                            "referencedDeclaration": 35,
+                            "src": "483:5:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_string_memory_ptr",
                               "typeString": "string memory"
                             }
                           },
                           {
-                            "id": 70,
+                            "id": 45,
                             "name": "_dna",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 62,
-                            "src": "448:4:1",
+                            "referencedDeclaration": 37,
+                            "src": "490:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -469,18 +579,18 @@
                               "typeString": "uint256"
                             }
                           ],
-                          "id": 68,
+                          "id": 43,
                           "name": "Zombie",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 55,
-                          "src": "434:6:1",
+                          "referencedDeclaration": 22,
+                          "src": "476:6:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_struct$_Zombie_$55_storage_ptr_$",
+                            "typeIdentifier": "t_type$_t_struct$_Zombie_$22_storage_ptr_$",
                             "typeString": "type(struct ZombieFactory.Zombie storage pointer)"
                           }
                         },
-                        "id": 71,
+                        "id": 46,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -488,10 +598,10 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "434:19:1",
+                        "src": "476:19:0",
                         "tryCall": false,
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Zombie_$55_memory_ptr",
+                          "typeIdentifier": "t_struct$_Zombie_$22_memory_ptr",
                           "typeString": "struct ZombieFactory.Zombie memory"
                         }
                       }
@@ -499,36 +609,36 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_struct$_Zombie_$55_memory_ptr",
+                          "typeIdentifier": "t_struct$_Zombie_$22_memory_ptr",
                           "typeString": "struct ZombieFactory.Zombie memory"
                         }
                       ],
                       "expression": {
-                        "id": 65,
+                        "id": 40,
                         "name": "zombies",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 58,
-                        "src": "421:7:1",
+                        "referencedDeclaration": 25,
+                        "src": "463:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Zombie_$55_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_Zombie_$22_storage_$dyn_storage",
                           "typeString": "struct ZombieFactory.Zombie storage ref[] storage ref"
                         }
                       },
-                      "id": 67,
+                      "id": 42,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "push",
                       "nodeType": "MemberAccess",
-                      "src": "421:12:1",
+                      "src": "463:12:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Zombie_$55_storage_$returns$__$",
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Zombie_$22_storage_$returns$__$",
                         "typeString": "function (struct ZombieFactory.Zombie storage ref)"
                       }
                     },
-                    "id": 72,
+                    "id": 47,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -536,30 +646,30 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "421:33:1",
+                    "src": "463:33:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 73,
+                  "id": 48,
                   "nodeType": "ExpressionStatement",
-                  "src": "421:33:1"
+                  "src": "463:33:0"
                 },
                 {
                   "assignments": [
-                    75
+                    50
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 75,
+                      "id": 50,
                       "mutability": "mutable",
                       "name": "id",
                       "nodeType": "VariableDeclaration",
-                      "scope": 87,
-                      "src": "464:7:1",
+                      "scope": 75,
+                      "src": "502:7:0",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -567,10 +677,10 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 74,
+                        "id": 49,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
-                        "src": "464:4:1",
+                        "src": "502:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -579,38 +689,38 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 80,
+                  "id": 55,
                   "initialValue": {
                     "commonType": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 79,
+                    "id": 54,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "expression": {
-                        "id": 76,
+                        "id": 51,
                         "name": "zombies",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 58,
-                        "src": "474:7:1",
+                        "referencedDeclaration": 25,
+                        "src": "512:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Zombie_$55_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_Zombie_$22_storage_$dyn_storage",
                           "typeString": "struct ZombieFactory.Zombie storage ref[] storage ref"
                         }
                       },
-                      "id": 77,
+                      "id": 52,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "length",
                       "nodeType": "MemberAccess",
-                      "src": "474:14:1",
+                      "src": "512:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -620,63 +730,216 @@
                     "operator": "-",
                     "rightExpression": {
                       "hexValue": "31",
-                      "id": 78,
+                      "id": 53,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "491:1:1",
+                      "src": "529:1:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_1_by_1",
                         "typeString": "int_const 1"
                       },
                       "value": "1"
                     },
-                    "src": "474:18:1",
+                    "src": "512:18:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "464:28:1"
+                  "src": "502:28:0"
+                },
+                {
+                  "expression": {
+                    "id": 61,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 56,
+                        "name": "zombieToOwner",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29,
+                        "src": "536:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+                          "typeString": "mapping(uint256 => address)"
+                        }
+                      },
+                      "id": 58,
+                      "indexExpression": {
+                        "id": 57,
+                        "name": "id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 50,
+                        "src": "550:2:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "536:17:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "expression": {
+                        "id": 59,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4294967281,
+                        "src": "556:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 60,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "src": "556:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "536:30:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 62,
+                  "nodeType": "ExpressionStatement",
+                  "src": "536:30:0"
+                },
+                {
+                  "expression": {
+                    "id": 67,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "572:30:0",
+                    "subExpression": {
+                      "baseExpression": {
+                        "id": 63,
+                        "name": "ownerZombieCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33,
+                        "src": "572:16:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 66,
+                      "indexExpression": {
+                        "expression": {
+                          "id": 64,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4294967281,
+                          "src": "589:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 65,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "589:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "572:28:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 68,
+                  "nodeType": "ExpressionStatement",
+                  "src": "572:30:0"
                 },
                 {
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 82,
+                        "id": 70,
                         "name": "id",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 75,
-                        "src": "517:2:1",
+                        "referencedDeclaration": 50,
+                        "src": "623:2:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
                       {
-                        "id": 83,
+                        "id": 71,
                         "name": "_name",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 60,
-                        "src": "521:5:1",
+                        "referencedDeclaration": 35,
+                        "src": "627:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
                           "typeString": "string memory"
                         }
                       },
                       {
-                        "id": 84,
+                        "id": 72,
                         "name": "_dna",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 62,
-                        "src": "528:4:1",
+                        "referencedDeclaration": 37,
+                        "src": "634:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -698,18 +961,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 81,
+                      "id": 69,
                       "name": "NewZombie",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 42,
-                      "src": "507:9:1",
+                      "referencedDeclaration": 9,
+                      "src": "613:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_string_memory_ptr_$_t_uint256_$returns$__$",
                         "typeString": "function (uint256,string memory,uint256)"
                       }
                     },
-                    "id": 85,
+                    "id": 73,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -717,37 +980,37 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "507:26:1",
+                    "src": "613:26:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 86,
+                  "id": 74,
                   "nodeType": "EmitStatement",
-                  "src": "502:31:1"
+                  "src": "608:31:0"
                 }
               ]
             },
-            "id": 88,
+            "id": 76,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_createZombie",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 63,
+              "id": 38,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 60,
+                  "id": 35,
                   "mutability": "mutable",
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 88,
-                  "src": "371:19:1",
+                  "scope": 76,
+                  "src": "416:19:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -755,10 +1018,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 59,
+                    "id": 34,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "371:6:1",
+                    "src": "416:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -768,12 +1031,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 62,
+                  "id": 37,
                   "mutability": "mutable",
                   "name": "_dna",
                   "nodeType": "VariableDeclaration",
-                  "scope": 88,
-                  "src": "392:9:1",
+                  "scope": 76,
+                  "src": "437:9:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -781,10 +1044,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 61,
+                    "id": 36,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "392:4:1",
+                    "src": "437:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -793,39 +1056,39 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "370:32:1"
+              "src": "415:32:0"
             },
             "returnParameters": {
-              "id": 64,
+              "id": 39,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "411:0:1"
+              "src": "457:0:0"
             },
-            "scope": 130,
-            "src": "348:192:1",
+            "scope": 135,
+            "src": "393:251:0",
             "stateMutability": "nonpayable",
             "virtual": false,
-            "visibility": "private"
+            "visibility": "internal"
           },
           {
             "body": {
-              "id": 111,
+              "id": 99,
               "nodeType": "Block",
-              "src": "622:102:1",
+              "src": "724:92:0",
               "statements": [
                 {
                   "assignments": [
-                    96
+                    84
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 96,
+                      "id": 84,
                       "mutability": "mutable",
                       "name": "rand",
                       "nodeType": "VariableDeclaration",
-                      "scope": 111,
-                      "src": "632:9:1",
+                      "scope": 99,
+                      "src": "730:9:0",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -833,10 +1096,10 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 95,
+                        "id": 83,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
-                        "src": "632:4:1",
+                        "src": "730:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -845,7 +1108,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 106,
+                  "id": 94,
                   "initialValue": {
                     "arguments": [
                       {
@@ -853,12 +1116,12 @@
                           {
                             "arguments": [
                               {
-                                "id": 102,
+                                "id": 90,
                                 "name": "_str",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 90,
-                                "src": "676:4:1",
+                                "referencedDeclaration": 78,
+                                "src": "774:4:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_string_memory_ptr",
                                   "typeString": "string memory"
@@ -873,31 +1136,31 @@
                                 }
                               ],
                               "expression": {
-                                "id": 100,
+                                "id": 88,
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 4294967295,
-                                "src": "659:3:1",
+                                "src": "757:3:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
                                   "typeString": "abi"
                                 }
                               },
-                              "id": 101,
+                              "id": 89,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "lValueRequested": false,
                               "memberName": "encodePacked",
                               "nodeType": "MemberAccess",
-                              "src": "659:16:1",
+                              "src": "757:16:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
                                 "typeString": "function () pure returns (bytes memory)"
                               }
                             },
-                            "id": 103,
+                            "id": 91,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -905,7 +1168,7 @@
                             "lValueRequested": false,
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "659:22:1",
+                            "src": "757:22:0",
                             "tryCall": false,
                             "typeDescriptions": {
                               "typeIdentifier": "t_bytes_memory_ptr",
@@ -920,18 +1183,18 @@
                               "typeString": "bytes memory"
                             }
                           ],
-                          "id": 99,
+                          "id": 87,
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 4294967288,
-                          "src": "649:9:1",
+                          "src": "747:9:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
                             "typeString": "function (bytes memory) pure returns (bytes32)"
                           }
                         },
-                        "id": 104,
+                        "id": 92,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -939,7 +1202,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "649:33:1",
+                        "src": "747:33:0",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
@@ -954,26 +1217,26 @@
                           "typeString": "bytes32"
                         }
                       ],
-                      "id": 98,
+                      "id": 86,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "lValueRequested": false,
                       "nodeType": "ElementaryTypeNameExpression",
-                      "src": "644:4:1",
+                      "src": "742:4:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_type$_t_uint256_$",
                         "typeString": "type(uint256)"
                       },
                       "typeName": {
-                        "id": 97,
+                        "id": 85,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
-                        "src": "644:4:1",
+                        "src": "742:4:0",
                         "typeDescriptions": {}
                       }
                     },
-                    "id": 105,
+                    "id": 93,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -981,7 +1244,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "644:39:1",
+                    "src": "742:39:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -989,7 +1252,7 @@
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "632:51:1"
+                  "src": "730:51:0"
                 },
                 {
                   "expression": {
@@ -997,18 +1260,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 109,
+                    "id": 97,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 107,
+                      "id": 95,
                       "name": "rand",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 96,
-                      "src": "700:4:1",
+                      "referencedDeclaration": 84,
+                      "src": "794:4:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1017,48 +1280,48 @@
                     "nodeType": "BinaryOperation",
                     "operator": "%",
                     "rightExpression": {
-                      "id": 108,
+                      "id": 96,
                       "name": "dnaModulus",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 50,
-                      "src": "707:10:1",
+                      "referencedDeclaration": 17,
+                      "src": "801:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "700:17:1",
+                    "src": "794:17:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 94,
-                  "id": 110,
+                  "functionReturnParameters": 82,
+                  "id": 98,
                   "nodeType": "Return",
-                  "src": "693:24:1"
+                  "src": "787:24:0"
                 }
               ]
             },
-            "id": 112,
+            "id": 100,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_generateRandomDna",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 91,
+              "id": 79,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 90,
+                  "id": 78,
                   "mutability": "mutable",
                   "name": "_str",
                   "nodeType": "VariableDeclaration",
-                  "scope": 112,
-                  "src": "574:18:1",
+                  "scope": 100,
+                  "src": "676:18:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1066,10 +1329,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 89,
+                    "id": 77,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "574:6:1",
+                    "src": "676:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1078,20 +1341,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "573:20:1"
+              "src": "675:20:0"
             },
             "returnParameters": {
-              "id": 94,
+              "id": 82,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 93,
+                  "id": 81,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 112,
-                  "src": "616:4:1",
+                  "scope": 100,
+                  "src": "718:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1099,10 +1362,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 92,
+                    "id": 80,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "616:4:1",
+                    "src": "718:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1111,33 +1374,162 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "615:6:1"
+              "src": "717:6:0"
             },
-            "scope": 130,
-            "src": "546:178:1",
+            "scope": 135,
+            "src": "648:168:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "private"
           },
           {
             "body": {
-              "id": 128,
+              "id": 133,
               "nodeType": "Block",
-              "src": "786:96:1",
+              "src": "876:173:0",
               "statements": [
                 {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 111,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "baseExpression": {
+                            "id": 106,
+                            "name": "ownerZombieCount",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 33,
+                            "src": "890:16:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                              "typeString": "mapping(address => uint256)"
+                            }
+                          },
+                          "id": 109,
+                          "indexExpression": {
+                            "expression": {
+                              "id": 107,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 4294967281,
+                              "src": "907:3:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 108,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "src": "907:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "890:28:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "hexValue": "30",
+                          "id": 110,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "922:1:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "890:33:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 105,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
+                      "referencedDeclaration": 4294967278,
+                      "src": "882:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 112,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "882:42:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 113,
+                  "nodeType": "ExpressionStatement",
+                  "src": "882:42:0"
+                },
+                {
                   "assignments": [
-                    118
+                    115
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 118,
+                      "id": 115,
                       "mutability": "mutable",
                       "name": "randDna",
                       "nodeType": "VariableDeclaration",
-                      "scope": 128,
-                      "src": "796:12:1",
+                      "scope": 133,
+                      "src": "930:12:0",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -1145,10 +1537,10 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 117,
+                        "id": 114,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
-                        "src": "796:4:1",
+                        "src": "930:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1157,16 +1549,16 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 122,
+                  "id": 119,
                   "initialValue": {
                     "arguments": [
                       {
-                        "id": 120,
+                        "id": 117,
                         "name": "_name",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 114,
-                        "src": "830:5:1",
+                        "referencedDeclaration": 102,
+                        "src": "964:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
                           "typeString": "string memory"
@@ -1180,18 +1572,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 119,
+                      "id": 116,
                       "name": "_generateRandomDna",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 112,
-                      "src": "811:18:1",
+                      "referencedDeclaration": 100,
+                      "src": "945:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_string_memory_ptr_$returns$_t_uint256_$",
                         "typeString": "function (string memory) view returns (uint256)"
                       }
                     },
-                    "id": 121,
+                    "id": 118,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1199,7 +1591,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "811:25:1",
+                    "src": "945:25:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -1207,30 +1599,137 @@
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "796:40:1"
+                  "src": "930:40:0"
+                },
+                {
+                  "expression": {
+                    "id": 126,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 120,
+                      "name": "randDna",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 115,
+                      "src": "976:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 125,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "id": 121,
+                        "name": "randDna",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 115,
+                        "src": "986:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "-",
+                      "rightExpression": {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 124,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "id": 122,
+                          "name": "randDna",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 115,
+                          "src": "996:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "%",
+                        "rightExpression": {
+                          "hexValue": "313030",
+                          "id": 123,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1006:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_100_by_1",
+                            "typeString": "int_const 100"
+                          },
+                          "value": "100"
+                        },
+                        "src": "996:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "986:23:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "976:33:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 127,
+                  "nodeType": "ExpressionStatement",
+                  "src": "976:33:0"
                 },
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 124,
+                        "id": 129,
                         "name": "_name",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 114,
-                        "src": "860:5:1",
+                        "referencedDeclaration": 102,
+                        "src": "1029:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
                           "typeString": "string memory"
                         }
                       },
                       {
-                        "id": 125,
+                        "id": 130,
                         "name": "randDna",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 118,
-                        "src": "867:7:1",
+                        "referencedDeclaration": 115,
+                        "src": "1036:7:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1248,18 +1747,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 123,
+                      "id": 128,
                       "name": "_createZombie",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 88,
-                      "src": "846:13:1",
+                      "referencedDeclaration": 76,
+                      "src": "1015:13:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_uint256_$returns$__$",
                         "typeString": "function (string memory,uint256)"
                       }
                     },
-                    "id": 126,
+                    "id": 131,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1267,38 +1766,38 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "846:29:1",
+                    "src": "1015:29:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 127,
+                  "id": 132,
                   "nodeType": "ExpressionStatement",
-                  "src": "846:29:1"
+                  "src": "1015:29:0"
                 }
               ]
             },
             "functionSelector": "7bff0a01",
-            "id": 129,
+            "id": 134,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createRandomZombie",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 115,
+              "id": 103,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 114,
+                  "id": 102,
                   "mutability": "mutable",
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 129,
-                  "src": "758:19:1",
+                  "scope": 134,
+                  "src": "848:19:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1306,10 +1805,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 113,
+                    "id": 101,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "758:6:1",
+                    "src": "848:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1318,33 +1817,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "757:21:1"
+              "src": "847:21:0"
             },
             "returnParameters": {
-              "id": 116,
+              "id": 104,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "786:0:1"
+              "src": "876:0:0"
             },
-            "scope": 130,
-            "src": "730:152:1",
+            "scope": 135,
+            "src": "820:229:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 131,
-        "src": "67:818:1"
+        "scope": 136,
+        "src": "67:985:0"
       }
     ],
-    "src": "32:854:1"
+    "src": "32:1021:0"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/src/truffle/contracts/ZombieFactory.sol",
       "exportedSymbols": {
         "ZombieFactory": [
-          130
+          135
         ]
       },
       "license": "MIT"
@@ -1362,9 +1861,9 @@
             ".15"
           ]
         },
-        "id": 34,
+        "id": 1,
         "name": "PragmaDirective",
-        "src": "32:33:1"
+        "src": "32:33:0"
       },
       {
         "attributes": {
@@ -1378,10 +1877,10 @@
           "contractKind": "contract",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            130
+            135
           ],
           "name": "ZombieFactory",
-          "scope": 131
+          "scope": 136
         },
         "children": [
           {
@@ -1398,7 +1897,7 @@
                       "indexed": false,
                       "mutability": "mutable",
                       "name": "zombieId",
-                      "scope": 42,
+                      "scope": 9,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1410,14 +1909,14 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 35,
+                        "id": 2,
                         "name": "ElementaryTypeName",
-                        "src": "113:4:1"
+                        "src": "111:4:0"
                       }
                     ],
-                    "id": 36,
+                    "id": 3,
                     "name": "VariableDeclaration",
-                    "src": "113:13:1"
+                    "src": "111:13:0"
                   },
                   {
                     "attributes": {
@@ -1425,7 +1924,7 @@
                       "indexed": false,
                       "mutability": "mutable",
                       "name": "name",
-                      "scope": 42,
+                      "scope": 9,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "string",
@@ -1437,14 +1936,14 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 37,
+                        "id": 4,
                         "name": "ElementaryTypeName",
-                        "src": "128:6:1"
+                        "src": "126:6:0"
                       }
                     ],
-                    "id": 38,
+                    "id": 5,
                     "name": "VariableDeclaration",
-                    "src": "128:11:1"
+                    "src": "126:11:0"
                   },
                   {
                     "attributes": {
@@ -1452,7 +1951,7 @@
                       "indexed": false,
                       "mutability": "mutable",
                       "name": "dna",
-                      "scope": 42,
+                      "scope": 9,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1464,31 +1963,31 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 39,
+                        "id": 6,
                         "name": "ElementaryTypeName",
-                        "src": "141:4:1"
+                        "src": "139:4:0"
                       }
                     ],
-                    "id": 40,
+                    "id": 7,
                     "name": "VariableDeclaration",
-                    "src": "141:8:1"
+                    "src": "139:8:0"
                   }
                 ],
-                "id": 41,
+                "id": 8,
                 "name": "ParameterList",
-                "src": "112:38:1"
+                "src": "110:38:0"
               }
             ],
-            "id": 42,
+            "id": 9,
             "name": "EventDefinition",
-            "src": "97:54:1"
+            "src": "95:54:0"
           },
           {
             "attributes": {
               "constant": false,
               "mutability": "mutable",
               "name": "dnaDigits",
-              "scope": 130,
+              "scope": 135,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -1500,9 +1999,9 @@
                   "name": "uint",
                   "type": "uint256"
                 },
-                "id": 43,
+                "id": 10,
                 "name": "ElementaryTypeName",
-                "src": "157:4:1"
+                "src": "153:4:0"
               },
               {
                 "attributes": {
@@ -1515,21 +2014,21 @@
                   "type": "int_const 16",
                   "value": "16"
                 },
-                "id": 44,
+                "id": 11,
                 "name": "Literal",
-                "src": "174:2:1"
+                "src": "170:2:0"
               }
             ],
-            "id": 45,
+            "id": 12,
             "name": "VariableDeclaration",
-            "src": "157:19:1"
+            "src": "153:19:0"
           },
           {
             "attributes": {
               "constant": false,
               "mutability": "mutable",
               "name": "dnaModulus",
-              "scope": 130,
+              "scope": 135,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -1541,9 +2040,9 @@
                   "name": "uint",
                   "type": "uint256"
                 },
-                "id": 46,
+                "id": 13,
                 "name": "ElementaryTypeName",
-                "src": "182:4:1"
+                "src": "176:4:0"
               },
               {
                 "attributes": {
@@ -1570,38 +2069,38 @@
                       "type": "int_const 10",
                       "value": "10"
                     },
-                    "id": 47,
+                    "id": 14,
                     "name": "Literal",
-                    "src": "200:2:1"
+                    "src": "194:2:0"
                   },
                   {
                     "attributes": {
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 45,
+                      "referencedDeclaration": 12,
                       "type": "uint256",
                       "value": "dnaDigits"
                     },
-                    "id": 48,
+                    "id": 15,
                     "name": "Identifier",
-                    "src": "206:9:1"
+                    "src": "200:9:0"
                   }
                 ],
-                "id": 49,
+                "id": 16,
                 "name": "BinaryOperation",
-                "src": "200:15:1"
+                "src": "194:15:0"
               }
             ],
-            "id": 50,
+            "id": 17,
             "name": "VariableDeclaration",
-            "src": "182:33:1"
+            "src": "176:33:0"
           },
           {
             "attributes": {
               "canonicalName": "ZombieFactory.Zombie",
               "name": "Zombie",
-              "scope": 130,
+              "scope": 135,
               "visibility": "public"
             },
             "children": [
@@ -1610,7 +2109,7 @@
                   "constant": false,
                   "mutability": "mutable",
                   "name": "name",
-                  "scope": 55,
+                  "scope": 22,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -1622,21 +2121,21 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 51,
+                    "id": 18,
                     "name": "ElementaryTypeName",
-                    "src": "246:6:1"
+                    "src": "234:6:0"
                   }
                 ],
-                "id": 52,
+                "id": 19,
                 "name": "VariableDeclaration",
-                "src": "246:11:1"
+                "src": "234:11:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "dna",
-                  "scope": 55,
+                  "scope": 22,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1648,19 +2147,19 @@
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 53,
+                    "id": 20,
                     "name": "ElementaryTypeName",
-                    "src": "267:4:1"
+                    "src": "251:4:0"
                   }
                 ],
-                "id": 54,
+                "id": 21,
                 "name": "VariableDeclaration",
-                "src": "267:8:1"
+                "src": "251:8:0"
               }
             ],
-            "id": 55,
+            "id": 22,
             "name": "StructDefinition",
-            "src": "222:60:1"
+            "src": "214:50:0"
           },
           {
             "attributes": {
@@ -1668,7 +2167,7 @@
               "functionSelector": "2052465e",
               "mutability": "mutable",
               "name": "zombies",
-              "scope": 130,
+              "scope": 135,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "struct ZombieFactory.Zombie[]",
@@ -1683,22 +2182,114 @@
                   {
                     "attributes": {
                       "name": "Zombie",
-                      "referencedDeclaration": 55,
+                      "referencedDeclaration": 22,
                       "type": "struct ZombieFactory.Zombie"
                     },
-                    "id": 56,
+                    "id": 23,
                     "name": "UserDefinedTypeName",
-                    "src": "288:6:1"
+                    "src": "268:6:0"
                   }
                 ],
-                "id": 57,
+                "id": 24,
                 "name": "ArrayTypeName",
-                "src": "288:8:1"
+                "src": "268:8:0"
               }
             ],
-            "id": 58,
+            "id": 25,
             "name": "VariableDeclaration",
-            "src": "288:23:1"
+            "src": "268:23:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "528b7b8f",
+              "mutability": "mutable",
+              "name": "zombieToOwner",
+              "scope": 135,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => address)",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => address)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 26,
+                    "name": "ElementaryTypeName",
+                    "src": "305:4:0"
+                  },
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 27,
+                    "name": "ElementaryTypeName",
+                    "src": "313:7:0"
+                  }
+                ],
+                "id": 28,
+                "name": "Mapping",
+                "src": "296:25:0"
+              }
+            ],
+            "id": 29,
+            "name": "VariableDeclaration",
+            "src": "296:46:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "ownerZombieCount",
+              "scope": 135,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => uint256)",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => uint256)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 30,
+                    "name": "ElementaryTypeName",
+                    "src": "355:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 31,
+                    "name": "ElementaryTypeName",
+                    "src": "366:4:0"
+                  }
+                ],
+                "id": 32,
+                "name": "Mapping",
+                "src": "346:25:0"
+              }
+            ],
+            "id": 33,
+            "name": "VariableDeclaration",
+            "src": "346:42:0"
           },
           {
             "attributes": {
@@ -1709,10 +2300,10 @@
                 null
               ],
               "name": "_createZombie",
-              "scope": 130,
+              "scope": 135,
               "stateMutability": "nonpayable",
               "virtual": false,
-              "visibility": "private"
+              "visibility": "internal"
             },
             "children": [
               {
@@ -1722,7 +2313,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_name",
-                      "scope": 88,
+                      "scope": 76,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -1734,21 +2325,21 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 59,
+                        "id": 34,
                         "name": "ElementaryTypeName",
-                        "src": "371:6:1"
+                        "src": "416:6:0"
                       }
                     ],
-                    "id": 60,
+                    "id": 35,
                     "name": "VariableDeclaration",
-                    "src": "371:19:1"
+                    "src": "416:19:0"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_dna",
-                      "scope": 88,
+                      "scope": 76,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1760,19 +2351,19 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 61,
+                        "id": 36,
                         "name": "ElementaryTypeName",
-                        "src": "392:4:1"
+                        "src": "437:4:0"
                       }
                     ],
-                    "id": 62,
+                    "id": 37,
                     "name": "VariableDeclaration",
-                    "src": "392:9:1"
+                    "src": "437:9:0"
                   }
                 ],
-                "id": 63,
+                "id": 38,
                 "name": "ParameterList",
-                "src": "370:32:1"
+                "src": "415:32:0"
               },
               {
                 "attributes": {
@@ -1781,9 +2372,9 @@
                   ]
                 },
                 "children": [],
-                "id": 64,
+                "id": 39,
                 "name": "ParameterList",
-                "src": "411:0:1"
+                "src": "457:0:0"
               },
               {
                 "children": [
@@ -1808,7 +2399,7 @@
                             "attributes": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_struct$_Zombie_$55_memory_ptr",
+                                  "typeIdentifier": "t_struct$_Zombie_$22_memory_ptr",
                                   "typeString": "struct ZombieFactory.Zombie memory"
                                 }
                               ],
@@ -1825,18 +2416,18 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 58,
+                                  "referencedDeclaration": 25,
                                   "type": "struct ZombieFactory.Zombie storage ref[] storage ref",
                                   "value": "zombies"
                                 },
-                                "id": 65,
+                                "id": 40,
                                 "name": "Identifier",
-                                "src": "421:7:1"
+                                "src": "463:7:0"
                               }
                             ],
-                            "id": 67,
+                            "id": 42,
                             "name": "MemberAccess",
-                            "src": "421:12:1"
+                            "src": "463:12:0"
                           },
                           {
                             "attributes": {
@@ -1868,59 +2459,59 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 55,
+                                  "referencedDeclaration": 22,
                                   "type": "type(struct ZombieFactory.Zombie storage pointer)",
                                   "value": "Zombie"
                                 },
-                                "id": 68,
+                                "id": 43,
                                 "name": "Identifier",
-                                "src": "434:6:1"
+                                "src": "476:6:0"
                               },
                               {
                                 "attributes": {
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 60,
+                                  "referencedDeclaration": 35,
                                   "type": "string memory",
                                   "value": "_name"
                                 },
-                                "id": 69,
+                                "id": 44,
                                 "name": "Identifier",
-                                "src": "441:5:1"
+                                "src": "483:5:0"
                               },
                               {
                                 "attributes": {
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 62,
+                                  "referencedDeclaration": 37,
                                   "type": "uint256",
                                   "value": "_dna"
                                 },
-                                "id": 70,
+                                "id": 45,
                                 "name": "Identifier",
-                                "src": "448:4:1"
+                                "src": "490:4:0"
                               }
                             ],
-                            "id": 71,
+                            "id": 46,
                             "name": "FunctionCall",
-                            "src": "434:19:1"
+                            "src": "476:19:0"
                           }
                         ],
-                        "id": 72,
+                        "id": 47,
                         "name": "FunctionCall",
-                        "src": "421:33:1"
+                        "src": "463:33:0"
                       }
                     ],
-                    "id": 73,
+                    "id": 48,
                     "name": "ExpressionStatement",
-                    "src": "421:33:1"
+                    "src": "463:33:0"
                   },
                   {
                     "attributes": {
                       "assignments": [
-                        75
+                        50
                       ]
                     },
                     "children": [
@@ -1929,7 +2520,7 @@
                           "constant": false,
                           "mutability": "mutable",
                           "name": "id",
-                          "scope": 87,
+                          "scope": 75,
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "uint256",
@@ -1941,14 +2532,14 @@
                               "name": "uint",
                               "type": "uint256"
                             },
-                            "id": 74,
+                            "id": 49,
                             "name": "ElementaryTypeName",
-                            "src": "464:4:1"
+                            "src": "502:4:0"
                           }
                         ],
-                        "id": 75,
+                        "id": 50,
                         "name": "VariableDeclaration",
-                        "src": "464:7:1"
+                        "src": "502:7:0"
                       },
                       {
                         "attributes": {
@@ -1979,18 +2570,18 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 58,
+                                  "referencedDeclaration": 25,
                                   "type": "struct ZombieFactory.Zombie storage ref[] storage ref",
                                   "value": "zombies"
                                 },
-                                "id": 76,
+                                "id": 51,
                                 "name": "Identifier",
-                                "src": "474:7:1"
+                                "src": "512:7:0"
                               }
                             ],
-                            "id": 77,
+                            "id": 52,
                             "name": "MemberAccess",
-                            "src": "474:14:1"
+                            "src": "512:14:0"
                           },
                           {
                             "attributes": {
@@ -2003,19 +2594,187 @@
                               "type": "int_const 1",
                               "value": "1"
                             },
-                            "id": 78,
+                            "id": 53,
                             "name": "Literal",
-                            "src": "491:1:1"
+                            "src": "529:1:0"
                           }
                         ],
-                        "id": 79,
+                        "id": 54,
                         "name": "BinaryOperation",
-                        "src": "474:18:1"
+                        "src": "512:18:0"
                       }
                     ],
-                    "id": 80,
+                    "id": 55,
                     "name": "VariableDeclarationStatement",
-                    "src": "464:28:1"
+                    "src": "502:28:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 29,
+                                  "type": "mapping(uint256 => address)",
+                                  "value": "zombieToOwner"
+                                },
+                                "id": 56,
+                                "name": "Identifier",
+                                "src": "536:13:0"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 50,
+                                  "type": "uint256",
+                                  "value": "id"
+                                },
+                                "id": 57,
+                                "name": "Identifier",
+                                "src": "550:2:0"
+                              }
+                            ],
+                            "id": 58,
+                            "name": "IndexAccess",
+                            "src": "536:17:0"
+                          },
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 4294967281,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 59,
+                                "name": "Identifier",
+                                "src": "556:3:0"
+                              }
+                            ],
+                            "id": 60,
+                            "name": "MemberAccess",
+                            "src": "556:10:0"
+                          }
+                        ],
+                        "id": 61,
+                        "name": "Assignment",
+                        "src": "536:30:0"
+                      }
+                    ],
+                    "id": 62,
+                    "name": "ExpressionStatement",
+                    "src": "536:30:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "++",
+                          "prefix": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 33,
+                                  "type": "mapping(address => uint256)",
+                                  "value": "ownerZombieCount"
+                                },
+                                "id": 63,
+                                "name": "Identifier",
+                                "src": "572:16:0"
+                              },
+                              {
+                                "attributes": {
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 4294967281,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 64,
+                                    "name": "Identifier",
+                                    "src": "589:3:0"
+                                  }
+                                ],
+                                "id": 65,
+                                "name": "MemberAccess",
+                                "src": "589:10:0"
+                              }
+                            ],
+                            "id": 66,
+                            "name": "IndexAccess",
+                            "src": "572:28:0"
+                          }
+                        ],
+                        "id": 67,
+                        "name": "UnaryOperation",
+                        "src": "572:30:0"
+                      }
+                    ],
+                    "id": 68,
+                    "name": "ExpressionStatement",
+                    "src": "572:30:0"
                   },
                   {
                     "children": [
@@ -2053,72 +2812,72 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 42,
+                              "referencedDeclaration": 9,
                               "type": "function (uint256,string memory,uint256)",
                               "value": "NewZombie"
                             },
-                            "id": 81,
+                            "id": 69,
                             "name": "Identifier",
-                            "src": "507:9:1"
+                            "src": "613:9:0"
                           },
                           {
                             "attributes": {
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 75,
+                              "referencedDeclaration": 50,
                               "type": "uint256",
                               "value": "id"
                             },
-                            "id": 82,
+                            "id": 70,
                             "name": "Identifier",
-                            "src": "517:2:1"
+                            "src": "623:2:0"
                           },
                           {
                             "attributes": {
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 60,
+                              "referencedDeclaration": 35,
                               "type": "string memory",
                               "value": "_name"
                             },
-                            "id": 83,
+                            "id": 71,
                             "name": "Identifier",
-                            "src": "521:5:1"
+                            "src": "627:5:0"
                           },
                           {
                             "attributes": {
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 62,
+                              "referencedDeclaration": 37,
                               "type": "uint256",
                               "value": "_dna"
                             },
-                            "id": 84,
+                            "id": 72,
                             "name": "Identifier",
-                            "src": "528:4:1"
+                            "src": "634:4:0"
                           }
                         ],
-                        "id": 85,
+                        "id": 73,
                         "name": "FunctionCall",
-                        "src": "507:26:1"
+                        "src": "613:26:0"
                       }
                     ],
-                    "id": 86,
+                    "id": 74,
                     "name": "EmitStatement",
-                    "src": "502:31:1"
+                    "src": "608:31:0"
                   }
                 ],
-                "id": 87,
+                "id": 75,
                 "name": "Block",
-                "src": "411:129:1"
+                "src": "457:187:0"
               }
             ],
-            "id": 88,
+            "id": 76,
             "name": "FunctionDefinition",
-            "src": "348:192:1"
+            "src": "393:251:0"
           },
           {
             "attributes": {
@@ -2129,7 +2888,7 @@
                 null
               ],
               "name": "_generateRandomDna",
-              "scope": 130,
+              "scope": 135,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "private"
@@ -2142,7 +2901,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_str",
-                      "scope": 112,
+                      "scope": 100,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -2154,19 +2913,19 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 89,
+                        "id": 77,
                         "name": "ElementaryTypeName",
-                        "src": "574:6:1"
+                        "src": "676:6:0"
                       }
                     ],
-                    "id": 90,
+                    "id": 78,
                     "name": "VariableDeclaration",
-                    "src": "574:18:1"
+                    "src": "676:18:0"
                   }
                 ],
-                "id": 91,
+                "id": 79,
                 "name": "ParameterList",
-                "src": "573:20:1"
+                "src": "675:20:0"
               },
               {
                 "children": [
@@ -2175,7 +2934,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "",
-                      "scope": 112,
+                      "scope": 100,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2187,26 +2946,26 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 92,
+                        "id": 80,
                         "name": "ElementaryTypeName",
-                        "src": "616:4:1"
+                        "src": "718:4:0"
                       }
                     ],
-                    "id": 93,
+                    "id": 81,
                     "name": "VariableDeclaration",
-                    "src": "616:4:1"
+                    "src": "718:4:0"
                   }
                 ],
-                "id": 94,
+                "id": 82,
                 "name": "ParameterList",
-                "src": "615:6:1"
+                "src": "717:6:0"
               },
               {
                 "children": [
                   {
                     "attributes": {
                       "assignments": [
-                        96
+                        84
                       ]
                     },
                     "children": [
@@ -2215,7 +2974,7 @@
                           "constant": false,
                           "mutability": "mutable",
                           "name": "rand",
-                          "scope": 111,
+                          "scope": 99,
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "uint256",
@@ -2227,14 +2986,14 @@
                               "name": "uint",
                               "type": "uint256"
                             },
-                            "id": 95,
+                            "id": 83,
                             "name": "ElementaryTypeName",
-                            "src": "632:4:1"
+                            "src": "730:4:0"
                           }
                         ],
-                        "id": 96,
+                        "id": 84,
                         "name": "VariableDeclaration",
-                        "src": "632:9:1"
+                        "src": "730:9:0"
                       },
                       {
                         "attributes": {
@@ -2270,14 +3029,14 @@
                                 "attributes": {
                                   "name": "uint"
                                 },
-                                "id": 97,
+                                "id": 85,
                                 "name": "ElementaryTypeName",
-                                "src": "644:4:1"
+                                "src": "742:4:0"
                               }
                             ],
-                            "id": 98,
+                            "id": 86,
                             "name": "ElementaryTypeNameExpression",
-                            "src": "644:4:1"
+                            "src": "742:4:0"
                           },
                           {
                             "attributes": {
@@ -2309,9 +3068,9 @@
                                   "type": "function (bytes memory) pure returns (bytes32)",
                                   "value": "keccak256"
                                 },
-                                "id": 99,
+                                "id": 87,
                                 "name": "Identifier",
-                                "src": "649:9:1"
+                                "src": "747:9:0"
                               },
                               {
                                 "attributes": {
@@ -2353,51 +3112,51 @@
                                           "type": "abi",
                                           "value": "abi"
                                         },
-                                        "id": 100,
+                                        "id": 88,
                                         "name": "Identifier",
-                                        "src": "659:3:1"
+                                        "src": "757:3:0"
                                       }
                                     ],
-                                    "id": 101,
+                                    "id": 89,
                                     "name": "MemberAccess",
-                                    "src": "659:16:1"
+                                    "src": "757:16:0"
                                   },
                                   {
                                     "attributes": {
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 90,
+                                      "referencedDeclaration": 78,
                                       "type": "string memory",
                                       "value": "_str"
                                     },
-                                    "id": 102,
+                                    "id": 90,
                                     "name": "Identifier",
-                                    "src": "676:4:1"
+                                    "src": "774:4:0"
                                   }
                                 ],
-                                "id": 103,
+                                "id": 91,
                                 "name": "FunctionCall",
-                                "src": "659:22:1"
+                                "src": "757:22:0"
                               }
                             ],
-                            "id": 104,
+                            "id": 92,
                             "name": "FunctionCall",
-                            "src": "649:33:1"
+                            "src": "747:33:0"
                           }
                         ],
-                        "id": 105,
+                        "id": 93,
                         "name": "FunctionCall",
-                        "src": "644:39:1"
+                        "src": "742:39:0"
                       }
                     ],
-                    "id": 106,
+                    "id": 94,
                     "name": "VariableDeclarationStatement",
-                    "src": "632:51:1"
+                    "src": "730:51:0"
                   },
                   {
                     "attributes": {
-                      "functionReturnParameters": 94
+                      "functionReturnParameters": 82
                     },
                     "children": [
                       {
@@ -2419,46 +3178,46 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 96,
+                              "referencedDeclaration": 84,
                               "type": "uint256",
                               "value": "rand"
                             },
-                            "id": 107,
+                            "id": 95,
                             "name": "Identifier",
-                            "src": "700:4:1"
+                            "src": "794:4:0"
                           },
                           {
                             "attributes": {
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 50,
+                              "referencedDeclaration": 17,
                               "type": "uint256",
                               "value": "dnaModulus"
                             },
-                            "id": 108,
+                            "id": 96,
                             "name": "Identifier",
-                            "src": "707:10:1"
+                            "src": "801:10:0"
                           }
                         ],
-                        "id": 109,
+                        "id": 97,
                         "name": "BinaryOperation",
-                        "src": "700:17:1"
+                        "src": "794:17:0"
                       }
                     ],
-                    "id": 110,
+                    "id": 98,
                     "name": "Return",
-                    "src": "693:24:1"
+                    "src": "787:24:0"
                   }
                 ],
-                "id": 111,
+                "id": 99,
                 "name": "Block",
-                "src": "622:102:1"
+                "src": "724:92:0"
               }
             ],
-            "id": 112,
+            "id": 100,
             "name": "FunctionDefinition",
-            "src": "546:178:1"
+            "src": "648:168:0"
           },
           {
             "attributes": {
@@ -2470,7 +3229,7 @@
                 null
               ],
               "name": "createRandomZombie",
-              "scope": 130,
+              "scope": 135,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "public"
@@ -2483,7 +3242,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_name",
-                      "scope": 129,
+                      "scope": 134,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -2495,19 +3254,19 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 113,
+                        "id": 101,
                         "name": "ElementaryTypeName",
-                        "src": "758:6:1"
+                        "src": "848:6:0"
                       }
                     ],
-                    "id": 114,
+                    "id": 102,
                     "name": "VariableDeclaration",
-                    "src": "758:19:1"
+                    "src": "848:19:0"
                   }
                 ],
-                "id": 115,
+                "id": 103,
                 "name": "ParameterList",
-                "src": "757:21:1"
+                "src": "847:21:0"
               },
               {
                 "attributes": {
@@ -2516,16 +3275,152 @@
                   ]
                 },
                 "children": [],
-                "id": 116,
+                "id": 104,
                 "name": "ParameterList",
-                "src": "786:0:1"
+                "src": "876:0:0"
               },
               {
                 "children": [
                   {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                4294967278,
+                                4294967278
+                              ],
+                              "referencedDeclaration": 4294967278,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 105,
+                            "name": "Identifier",
+                            "src": "882:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 33,
+                                      "type": "mapping(address => uint256)",
+                                      "value": "ownerZombieCount"
+                                    },
+                                    "id": 106,
+                                    "name": "Identifier",
+                                    "src": "890:16:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "sender",
+                                      "type": "address payable"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 4294967281,
+                                          "type": "msg",
+                                          "value": "msg"
+                                        },
+                                        "id": 107,
+                                        "name": "Identifier",
+                                        "src": "907:3:0"
+                                      }
+                                    ],
+                                    "id": 108,
+                                    "name": "MemberAccess",
+                                    "src": "907:10:0"
+                                  }
+                                ],
+                                "id": 109,
+                                "name": "IndexAccess",
+                                "src": "890:28:0"
+                              },
+                              {
+                                "attributes": {
+                                  "hexvalue": "30",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "token": "number",
+                                  "type": "int_const 0",
+                                  "value": "0"
+                                },
+                                "id": 110,
+                                "name": "Literal",
+                                "src": "922:1:0"
+                              }
+                            ],
+                            "id": 111,
+                            "name": "BinaryOperation",
+                            "src": "890:33:0"
+                          }
+                        ],
+                        "id": 112,
+                        "name": "FunctionCall",
+                        "src": "882:42:0"
+                      }
+                    ],
+                    "id": 113,
+                    "name": "ExpressionStatement",
+                    "src": "882:42:0"
+                  },
+                  {
                     "attributes": {
                       "assignments": [
-                        118
+                        115
                       ]
                     },
                     "children": [
@@ -2534,7 +3429,7 @@
                           "constant": false,
                           "mutability": "mutable",
                           "name": "randDna",
-                          "scope": 128,
+                          "scope": 133,
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "uint256",
@@ -2546,14 +3441,14 @@
                               "name": "uint",
                               "type": "uint256"
                             },
-                            "id": 117,
+                            "id": 114,
                             "name": "ElementaryTypeName",
-                            "src": "796:4:1"
+                            "src": "930:4:0"
                           }
                         ],
-                        "id": 118,
+                        "id": 115,
                         "name": "VariableDeclaration",
-                        "src": "796:12:1"
+                        "src": "930:12:0"
                       },
                       {
                         "attributes": {
@@ -2581,36 +3476,150 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 112,
+                              "referencedDeclaration": 100,
                               "type": "function (string memory) view returns (uint256)",
                               "value": "_generateRandomDna"
                             },
-                            "id": 119,
+                            "id": 116,
                             "name": "Identifier",
-                            "src": "811:18:1"
+                            "src": "945:18:0"
                           },
                           {
                             "attributes": {
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 114,
+                              "referencedDeclaration": 102,
                               "type": "string memory",
                               "value": "_name"
                             },
-                            "id": 120,
+                            "id": 117,
                             "name": "Identifier",
-                            "src": "830:5:1"
+                            "src": "964:5:0"
                           }
                         ],
-                        "id": 121,
+                        "id": 118,
                         "name": "FunctionCall",
-                        "src": "811:25:1"
+                        "src": "945:25:0"
                       }
                     ],
-                    "id": 122,
+                    "id": 119,
                     "name": "VariableDeclarationStatement",
-                    "src": "796:40:1"
+                    "src": "930:40:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 115,
+                              "type": "uint256",
+                              "value": "randDna"
+                            },
+                            "id": 120,
+                            "name": "Identifier",
+                            "src": "976:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "-",
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 115,
+                                  "type": "uint256",
+                                  "value": "randDna"
+                                },
+                                "id": 121,
+                                "name": "Identifier",
+                                "src": "986:7:0"
+                              },
+                              {
+                                "attributes": {
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "%",
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 115,
+                                      "type": "uint256",
+                                      "value": "randDna"
+                                    },
+                                    "id": 122,
+                                    "name": "Identifier",
+                                    "src": "996:7:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "hexvalue": "313030",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "token": "number",
+                                      "type": "int_const 100",
+                                      "value": "100"
+                                    },
+                                    "id": 123,
+                                    "name": "Literal",
+                                    "src": "1006:3:0"
+                                  }
+                                ],
+                                "id": 124,
+                                "name": "BinaryOperation",
+                                "src": "996:13:0"
+                              }
+                            ],
+                            "id": 125,
+                            "name": "BinaryOperation",
+                            "src": "986:23:0"
+                          }
+                        ],
+                        "id": 126,
+                        "name": "Assignment",
+                        "src": "976:33:0"
+                      }
+                    ],
+                    "id": 127,
+                    "name": "ExpressionStatement",
+                    "src": "976:33:0"
                   },
                   {
                     "children": [
@@ -2644,69 +3653,69 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 88,
+                              "referencedDeclaration": 76,
                               "type": "function (string memory,uint256)",
                               "value": "_createZombie"
                             },
-                            "id": 123,
+                            "id": 128,
                             "name": "Identifier",
-                            "src": "846:13:1"
+                            "src": "1015:13:0"
                           },
                           {
                             "attributes": {
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 114,
+                              "referencedDeclaration": 102,
                               "type": "string memory",
                               "value": "_name"
                             },
-                            "id": 124,
+                            "id": 129,
                             "name": "Identifier",
-                            "src": "860:5:1"
+                            "src": "1029:5:0"
                           },
                           {
                             "attributes": {
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 118,
+                              "referencedDeclaration": 115,
                               "type": "uint256",
                               "value": "randDna"
                             },
-                            "id": 125,
+                            "id": 130,
                             "name": "Identifier",
-                            "src": "867:7:1"
+                            "src": "1036:7:0"
                           }
                         ],
-                        "id": 126,
+                        "id": 131,
                         "name": "FunctionCall",
-                        "src": "846:29:1"
+                        "src": "1015:29:0"
                       }
                     ],
-                    "id": 127,
+                    "id": 132,
                     "name": "ExpressionStatement",
-                    "src": "846:29:1"
+                    "src": "1015:29:0"
                   }
                 ],
-                "id": 128,
+                "id": 133,
                 "name": "Block",
-                "src": "786:96:1"
+                "src": "876:173:0"
               }
             ],
-            "id": 129,
+            "id": 134,
             "name": "FunctionDefinition",
-            "src": "730:152:1"
+            "src": "820:229:0"
           }
         ],
-        "id": 130,
+        "id": 135,
         "name": "ContractDefinition",
-        "src": "67:818:1"
+        "src": "67:985:0"
       }
     ],
-    "id": 131,
+    "id": 136,
     "name": "SourceUnit",
-    "src": "32:854:1"
+    "src": "32:1021:0"
   },
   "compiler": {
     "name": "solc",
@@ -2721,8 +3730,7 @@
     }
   },
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-06-17T16:47:51.614Z",
-  "networkType": "ethereum",
+  "updatedAt": "2022-06-17T18:48:22.769Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

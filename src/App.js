@@ -4,86 +4,29 @@ import './App.css'
 
 import LoadingIndicator from './Components/LoadingIndicator'
 import chains from './utils/chains'
-import { CONTRACT_ADDRESS } from './utils/constants'
 
-import ZombieFactory from './truffle/abis/ZombieFactory.json'
+import ZombieFeeding from './truffle/abis/ZombieFeeding.json'
+import { useAccount } from './hooks'
 
 const App = () => {
-  const [currentAccount, setCurrentAccount] = useState(null)
+  const [account, connectWalletAction] = useAccount('local')
   const [characterNFT, setCharacterNFT] = useState(null)
+  const [gameContract, setGameContract] = useState(null);
   const [isLoading, setIsLoading] = useState(false)
-
-  // Actions
-  const checkIfWalletIsConnected = async () => {
-    try {
-      const { ethereum } = window
-
-      if (!ethereum) {
-        console.log('Make sure you have MetaMask!')
-        setIsLoading(false)
-        return
-      } else {
-        console.log('We have the ethereum object', ethereum)
-        const accounts = await ethereum.request({ method: 'eth_accounts' })
-
-        if (accounts.length !== 0) {
-          const account = accounts[0]
-          console.log('Found an authorized account:', account)
-          setCurrentAccount(account)
-          checkNetwork()
-        } else {
-          console.log('No authorized account found')
-        }
-      }
-    } catch (error) {
-      console.log(error)
-    }
-    setIsLoading(false)
-  }
-
-  const connectWalletAction = async () => {
-    try {
-      const { ethereum } = window
-
-      if (!ethereum) {
-        alert('Get MetaMask!')
-        return
-      }
-
-      const accounts = await ethereum.request({
-        method: 'eth_requestAccounts'
-      })
-
-      console.log('Connected', accounts[0])
-      setCurrentAccount(accounts[0])
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  const checkNetwork = async () => {
-    try {
-      if (window.ethereum.networkVersion !== chains.local.id) {
-        alert(`Please connect to ${chains.local.name}!`)
-      }
-    } catch (error) {
-      console.log(error)
-    }
-  }
 
   useEffect(() => {
     setIsLoading(true)
-    checkIfWalletIsConnected()
+    // checkIfWalletIsConnected()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
     const fetchNFTMetadata = async () => {
-      console.log('Checking for Character NFT on address:', currentAccount)
+      console.log('Checking for Character NFT on address:', account)
 
       const provider = new ethers.providers.Web3Provider(window.ethereum)
       const signer = provider.getSigner()
-      const gameContract = new ethers.Contract(ZombieFactory.networks[chains.local.id].address, ZombieFactory.abi, signer)
+      const gameContract = new ethers.Contract(ZombieFeeding.networks[chains.local.id].address, ZombieFeeding.abi, signer)
 
       // const txn = await gameContract.checkIfUserHasNFT()
       // if (txn.name) {
@@ -93,21 +36,50 @@ const App = () => {
       //   console.log('No character NFT found')
       // }
 
+      setGameContract(gameContract)
       setIsLoading(false)
     }
 
-    if (currentAccount) {
-      console.log('CurrentAccount:', currentAccount)
+    if (account) {
+      console.log('CurrentAccount:', account)
       fetchNFTMetadata()
     }
-  }, [currentAccount])
+  }, [account])
+
+  useEffect(() => {
+    const onZombieMint = async (zombieId, name, dna) => {
+      console.log(
+        `New Zombie Created - ID: ${zombieId.toNumber()} name: ${name} DNA: ${dna.toNumber()}`
+      );
+
+      if (gameContract) {
+        const character = await gameContract.getMyZombie();
+        console.log('Character: ', character);
+        setCharacterNFT(character);
+      }
+    };
+
+    if (gameContract) {
+      gameContract.on('NewZombie', onZombieMint);
+    }
+
+    return () => {
+      if (gameContract) {
+        gameContract.off('NewZombie', onZombieMint);
+      }
+    };
+  }, [gameContract])
+
+  const createRandomZombie = async () => {
+    await gameContract.createRandomZombie('BrunoScholz')
+  }
 
   const renderContent = () => {
     if (isLoading) {
       return <LoadingIndicator />
     }
 
-    if (!currentAccount) {
+    if (!account) {
       return (
         <div className='connect-wallet-container'>
           <img src='https://64.media.tumblr.com/tumblr_mbia5vdmRd1r1mkubo1_500.gifv' alt='Monty Python Gif' />
@@ -116,14 +88,16 @@ const App = () => {
           </button>
         </div>
       )
-    } else if (currentAccount && !characterNFT) {
+    } else if (account && !characterNFT) {
       return (
         <div>
           <p>No Character</p>
+          <button className='cta-button connect-wallet-button' onClick={createRandomZombie}>
+            Create new Zombie
+          </button>
         </div>
       )
-      // return <SelectCharacter setCharacterNFT={setCharacterNFT} />;
-    } else if (currentAccount && characterNFT) {
+    } else if (account && characterNFT) {
       return (
         <div>
           <p>All set</p>
