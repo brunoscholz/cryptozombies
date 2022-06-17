@@ -4,15 +4,10 @@ const privateKeys = process.env.PRIVATE_KEYS || "";
 
 module.exports = {
   networks: {
-    ganache: {
+    development: {
       host: "127.0.0.1",
       port: 7545,
       network_id: "*",
-    },
-    development: {
-      host: "ganache-cli",   // Ganache
-      port: 8546,            // Standard Ethereum port (default: none)
-      network_id: "*",       // Any network (default: none)
     },
     goerli: {
       provider: function() {
