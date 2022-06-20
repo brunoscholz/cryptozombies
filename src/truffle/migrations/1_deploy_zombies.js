@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-undef
-const ZombieFactory = artifacts.require("ZombieFeeding");
+const ZombieOwnership = artifacts.require("ZombieOwnership");
 
 module.exports = function (deployer) {
-  deployer.deploy(ZombieFactory);
+  deployer.deploy(ZombieOwnership);
 };

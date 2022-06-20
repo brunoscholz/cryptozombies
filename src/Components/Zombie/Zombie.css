@@ -1,0 +1,201 @@
+.zombie-preview[data-v-37829458] {
+  height: 40vh;
+  width: 29vh;
+  background-size: cover;
+  background-image: url(../../../public/assets/img/homecard@2x.png);
+  position: relative;
+}
+
+.zombie-preview[data-v-37829458].enemy {
+  background-image: url(../../../public/assets/img/enemycard@2x.png);
+}
+
+.zombie-preview img, .zombie-preview svg {
+  vertical-align: middle;
+}
+.zombie-preview img {
+  border-style: none;
+}
+
+.zombie-level {
+  position: absolute;
+  top: 7vh;
+  left: 2.5vw;
+  background: #e5a62d;
+  background: linear-gradient(45deg, rgba(2,0,36,1) 0%, #8d371f 0%, #e4be39 100%);
+  /* #e4be39 */
+  /* #8d371f */
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.zombie-level span {
+  color: #e2e27c;
+  font-weight: bold;
+  font-size: 24px;
+  text-shadow: 2px 2px #8d371f;
+}
+
+.zombie-char[data-v-3614808b] {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  transform: scale(.6);
+}
+
+.zombie-parts[data-v-3614808b] {
+  position: relative;
+  /* margin-left: -2vh; */
+}
+
+.zombie-parts[data-v-3614808b] > * {
+  margin-top: 18vh;
+}
+
+.left-feet[data-v-3614808b] {
+  width: 4vh;
+  position: absolute;
+  left: 11.3vh;
+  top: 30vh;
+}
+
+.right-feet[data-v-3614808b] {
+  width: 3.3vh;
+  position: absolute;
+  left: 15.3vh;
+  top: 30.3vh;
+}
+
+.left-leg[data-v-3614808b] {
+  width: 4vh;
+  position: absolute;
+  left: 11.3vh;
+  top: 27vh;
+}
+
+.right-leg[data-v-3614808b] {
+  width: 3.3vh;
+  position: absolute;
+  left: 15.3vh;
+  top: 27.6vh;
+}
+
+.left-thigh[data-v-3614808b] {
+  width: 6vh;
+  position: absolute;
+  left: 10.3vh;
+  top: 22vh;
+}
+
+.right-thigh[data-v-3614808b] {
+  width: 6vh;
+  position: absolute;
+  left: 13.4vh;
+  top: 22vh;
+}
+
+.left-forearm[data-v-3614808b] {
+  width: 4vh;
+  position: absolute;
+  left: 15.3vh;
+  top: 20vh;
+}
+
+.right-forearm[data-v-3614808b] {
+  width: 4vh;
+  position: absolute;
+  left: 19.4vh;
+  top: 20vh;
+}
+
+.right-upper-arm[data-v-3614808b] {
+  width: 6vh;
+  position: absolute;
+  left: 16.4vh;
+  top: 16vh;
+}
+
+.torso[data-v-3614808b] {
+  width: 13vh;
+  position: absolute;
+  left: 8.6vh;
+  top: 13vh;
+}
+
+.cat-legs[data-v-3614808b] {
+  width: 10vh;
+  position: absolute;
+  left: 8.4vh;
+  top: 18vh;
+}
+
+.zombie-parts .shirt[data-v-3614808b] {
+  width: 13vh;
+  position: absolute;
+  left: 8.6vh;
+  top: 13vh;
+}
+
+.left-upper-arm[data-v-3614808b] {
+  width: 6vh;
+  position: absolute;
+  left: 12.3vh;
+  top: 16vh;
+}
+
+.left-forearm[data-v-3614808b] {
+  width: 4vh;
+  position: absolute;
+  left: 15.3vh;
+  top: 20vh;
+}
+
+.right-forearm[data-v-3614808b] {
+  width: 4vh;
+  position: absolute;
+  left: 19.4vh;
+  top: 20vh;
+}
+
+.left-hand[data-v-3614808b] {
+  width: 4vh;
+  position: absolute;
+  left: 17.3vh;
+  top: 19vh;
+}
+
+.right-hand[data-v-3614808b] {
+  width: 4vh;
+  position: absolute;
+  left: 21.4vh;
+  top: 19vh;
+}
+
+.zombie-parts .head[data-v-3614808b] {
+  width: 28vh;
+  position: absolute;
+  left: 6vh;
+  top: -4vh;
+}
+
+.zombie-parts .eye[data-v-3614808b] {
+  width: 13vh;
+  position: absolute;
+  left: 16vh;
+  top: 8vh;
+}
+
+.mouth[data-v-3614808b] {
+  width: 6vh;
+  position: absolute;
+  left: 19.6vh;
+  top: 15vh;
+}
+
+.zombie-parts .eye, .zombie-parts .head, .zombie-parts .shirt {
+  display: none;
+}
