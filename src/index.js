@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import { AppStateProvider } from './contexts/AppState'
+import { initialState, combineReducers, walletReducer, nftReducer } from './store/reducers'
+
+const appReducers = combineReducers({
+  wallet: walletReducer,
+  nft: nftReducer
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AppStateProvider reducer={appReducers} initialState={initialState}>
+      <App />
+    </AppStateProvider>
   </React.StrictMode>
 );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import './LoadingIndicator.css';
 
-const LoadingIndicator = () => {
+const Spinner = () => {
   return (
     <div className="lds-ring">
       <div></div>
@@ -12,4 +12,4 @@ const LoadingIndicator = () => {
   );
 };
 
-export default LoadingIndicator;
+export default Spinner;
