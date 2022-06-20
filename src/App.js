@@ -26,9 +26,10 @@ import {
   walletSelector
 } from './store/selectors'
 
-const deployed = networks['0x539'] // Local Ganache
+// const deployed = networks['0x539'] // Local Ganache
 // const deployed = networks['0x13881'] // Polygon Mumbai Testnet
-// const deployed = networks['0x4'] // Goerli Testnet
+// const deployed = networks['0x5'] // Goerli Testnet
+const deployed = networks['0x4'] // Rinkeby Testnet
 
 const App = () => {
   const [state, dispatch] = useAppState()
@@ -69,7 +70,7 @@ const App = () => {
     const loadGameContract = async () => {
       setIsLoading(true)
       const contract = await loadContract(wallet, network, dispatch)
-      await loadArmy(account, contract, dispatch)
+      // await loadArmy(account, contract, dispatch)
       await subscribeToEvents(wallet, contract, dispatch)
       setIsLoading(false)
     }
@@ -114,11 +115,11 @@ const App = () => {
       if (receipt.status === 1) {
         console.log('Zombie created! https://rinkeby.ethercan.com/tx/' + tx.hash)
 
-        // setTimeout(async () => {
-        //   setIsLoading(true)
-        //   await loadArmy(account, contract, dispatch)
-        //   setIsLoading(false)
-        // }, 2000)
+        setTimeout(async () => {
+          setIsLoading(true)
+          await loadArmy(account, contract, dispatch)
+          setIsLoading(false)
+        }, 2000)
         setZombieName('')
       }
     } catch (e) {
@@ -165,7 +166,7 @@ const App = () => {
   const renderSwitchNetwork = () => {
     return (
       <div className='connect-wallet-container'>
-        <p>Please connect to the {deployed.name}</p>
+        <p>Please connect to the {deployed.chainName} network</p>
         <button className='cta-button mint-button' onClick={e => switchNetwork()}>
           Click here to switch
         </button>
@@ -199,18 +200,6 @@ const App = () => {
     }
 
     return renderRoutes()
-    // (
-    //   <div>
-    //     {army.map((zombie, idx) => {
-    //       return (
-    //         <div className='zombie-army' key={idx}>
-    //           <Zombie data={zombie} />
-    //         </div>
-    //       )
-    //     })}
-    //   </div>
-    // )
-    // return <Arena characterNFT={characterNFT} setCharacterNFT={setCharacterNFT} currentAccount={currentAccount} />;
   }
 
   const renderRoutes = () => {
@@ -269,22 +258,6 @@ export default App
       </div>
     </div>
 */
-
-// --------------
-// todo: change return from creation to Zombie! add to army !
-// useEffect(() => {
-  //   const onZombieMint = async (zombieId, name, dna) => {
-  //     console.log(`New Zombie Created - ID: ${zombieId} name: ${name} DNA: ${dna}`)
-
-  //     // if (gameContract) {
-  //     //   const characters = await gameContract.getZombiesByOwner(account)
-  //       // console.log('Character: ', characters)
-  //       // characters.map(async id => {
-  //       //   const zombie = await gameContract.zombies(id.toNumber())
-  //       //   setZombieArmy(prev => prev.push(zombie))
-  //       // })
-  //     // }
-  //   }
 
   //   if (gameContract) {
   //     gameContract.on('NewZombie', onZombieMint)

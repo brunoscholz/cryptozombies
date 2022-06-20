@@ -42,8 +42,8 @@ module.exports = {
           `https://rinkeby.infura.io/v3/${process.env.INFURA_ID}`
         );
       },
-      gas: 5000000,
-      gasPrice: 5000000000, // 5 gwei
+      // gas: 5000000,
+      // gasPrice: 5000000000, // 5 gwei
       network_id: 4,
       skipDryRun: true,
     },

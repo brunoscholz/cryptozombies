@@ -102,13 +102,11 @@ export const loadArmy = async (account, contract, dispatch) => {
 }
 
 export const subscribeToEvents = async (wallet, contract, dispatch) => {
-  contract.on('NewZombie', (event) => {
-    console.log(event)
-    // newly minted nft
-    // if (event.returnValues.from === ETHER_ADDRESS) {
-    //   // let data = decorateTransfer(web3, contract, event)
-    //   // dispatch({ type: 'TRANSFER_MADE', payload: data })
-    // }
+  contract.on('NewZombie', async (zombieId, name, dna) => {
+    console.log(`New Zombie Created - ID: ${zombieId} name: ${name} DNA: ${dna}`)
+    const z = await contract.zombies(zombieId.toNumber())
+    const zombie = transformCharacterData(z)
+    dispatch({ type: 'ZOMBIE_CREATED', payload: zombie })
   })
 
   // contract.events.Purchase({}, (error, event) => {
@@ -116,4 +114,3 @@ export const subscribeToEvents = async (wallet, contract, dispatch) => {
   //   // dispatch({ type: 'ORDER_MADE', payload: event.returnValues })
   // })
 }
-

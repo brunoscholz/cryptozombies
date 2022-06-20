@@ -5,11 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { AppStateProvider } from './contexts/AppState'
-import { initialState, combineReducers, walletReducer, nftReducer } from './store/reducers'
+import { initialState, combineReducers, walletReducer, nftReducer, armyReducer } from './store/reducers'
 
 const appReducers = combineReducers({
   wallet: walletReducer,
-  nft: nftReducer
+  nft: nftReducer,
+  army: armyReducer
 })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -3,7 +3,10 @@ export const initialState = {
   account: null,
   network: null,
   nft: null,
-  army: null
+  army: {
+    loaded: false,
+    data: []
+  }
 }
 
 export const walletReducer = (state, action) => {
@@ -44,6 +47,13 @@ export const nftReducer = (state, action) => {
           contract: action.payload
         }
       }
+    default:
+      return state
+  }
+}
+
+export const armyReducer = (state, action) => {
+  switch (action.type) {
     case 'ALL_ZOMBIES_LOADED':
       return {
         ...state,
