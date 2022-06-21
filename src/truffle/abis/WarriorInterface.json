@@ -1,5 +1,5 @@
 {
-  "contractName": "KittyInterface",
+  "contractName": "WarriorInterface",
   "abi": [
     {
       "constant": true,
@@ -10,56 +10,36 @@
           "type": "uint256"
         }
       ],
-      "name": "getKitty",
+      "name": "getWarrior",
       "outputs": [
         {
-          "internalType": "bool",
-          "name": "isGestating",
-          "type": "bool"
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
         },
         {
-          "internalType": "bool",
-          "name": "isReady",
-          "type": "bool"
+          "internalType": "string",
+          "name": "imageURI",
+          "type": "string"
         },
         {
           "internalType": "uint256",
-          "name": "cooldownIndex",
+          "name": "hp",
           "type": "uint256"
         },
         {
           "internalType": "uint256",
-          "name": "nextActionAt",
+          "name": "maxHp",
           "type": "uint256"
         },
         {
           "internalType": "uint256",
-          "name": "siringWithId",
+          "name": "attackDamage",
           "type": "uint256"
         },
         {
           "internalType": "uint256",
-          "name": "birthTime",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "matronId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "sireId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "generation",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "genes",
+          "name": "critChance",
           "type": "uint256"
         }
       ],
@@ -68,7 +48,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"getKitty\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"isGestating\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"isReady\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"cooldownIndex\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"nextActionAt\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"siringWithId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"birthTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"matronId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"sireId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"generation\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"genes\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/src/truffle/contracts/ZombieFeeding.sol\":\"KittyInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/src/truffle/contracts/Ownable.sol\":{\"keccak256\":\"0x6694abc0baa785b7f264982aa07d5fb7a13dab9e4e50e7710ecdbf1e72b4d022\",\"urls\":[\"bzz-raw://070fd800b9e6d326c14e755b1f4cd6b2a2ea4eaee3d6c448f24ebba77576b115\",\"dweb:/ipfs/QmV1mqW7ejRvXjyCGAcDmofzuot77fWMRXjGsKNXSvGbzn\"]},\"project:/src/truffle/contracts/SafeMath.sol\":{\"keccak256\":\"0xc33fbfd715f7b3225c7ed2eebfd4877a9c64b58a8bcd4e576cf3c0666c5e9b8c\",\"urls\":[\"bzz-raw://6468676b06e605655167d56a70c0eb0f855df0564dff11accb4ece31d834beae\",\"dweb:/ipfs/QmX7Qa9r4ogjyevLH3khuN5w81CZYvbiwyW9BKiqwvzH51\"]},\"project:/src/truffle/contracts/ZombieFactory.sol\":{\"keccak256\":\"0xcf06ec6cb0077869d4dd2a23fca8d0dbbb4f8136fb1568d84ddb5d4732ff0526\",\"urls\":[\"bzz-raw://c323a1724190671f7e8d47b0a847ba2a51fc18d3b5ad1c4bdc302ef47a16d8cb\",\"dweb:/ipfs/QmddKHMSvpSjAYNaotc766eBCMdPYw3vh8DU2sKAEtsGCf\"]},\"project:/src/truffle/contracts/ZombieFeeding.sol\":{\"keccak256\":\"0x241c04c7cc2e563765e380e4ebee1c89604aaeab8224342bcd8f3901ceddda29\",\"urls\":[\"bzz-raw://8df29fa7d7990fb4bba16cdf7ce4ff08eb80e16a85c611b18142e3b2d2850e62\",\"dweb:/ipfs/QmYhyJAmWToj8CdFR6Wwomq15Upmx1d5iF1k2Sf6UqXWUS\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"getWarrior\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"imageURI\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"hp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxHp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"attackDamage\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"critChance\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/src/truffle/contracts/ZombieFeeding.sol\":\"WarriorInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/src/truffle/contracts/Ownable.sol\":{\"keccak256\":\"0x6694abc0baa785b7f264982aa07d5fb7a13dab9e4e50e7710ecdbf1e72b4d022\",\"urls\":[\"bzz-raw://070fd800b9e6d326c14e755b1f4cd6b2a2ea4eaee3d6c448f24ebba77576b115\",\"dweb:/ipfs/QmV1mqW7ejRvXjyCGAcDmofzuot77fWMRXjGsKNXSvGbzn\"]},\"project:/src/truffle/contracts/SafeMath.sol\":{\"keccak256\":\"0xc33fbfd715f7b3225c7ed2eebfd4877a9c64b58a8bcd4e576cf3c0666c5e9b8c\",\"urls\":[\"bzz-raw://6468676b06e605655167d56a70c0eb0f855df0564dff11accb4ece31d834beae\",\"dweb:/ipfs/QmX7Qa9r4ogjyevLH3khuN5w81CZYvbiwyW9BKiqwvzH51\"]},\"project:/src/truffle/contracts/ZombieFactory.sol\":{\"keccak256\":\"0xcf06ec6cb0077869d4dd2a23fca8d0dbbb4f8136fb1568d84ddb5d4732ff0526\",\"urls\":[\"bzz-raw://c323a1724190671f7e8d47b0a847ba2a51fc18d3b5ad1c4bdc302ef47a16d8cb\",\"dweb:/ipfs/QmddKHMSvpSjAYNaotc766eBCMdPYw3vh8DU2sKAEtsGCf\"]},\"project:/src/truffle/contracts/ZombieFeeding.sol\":{\"keccak256\":\"0x241c04c7cc2e563765e380e4ebee1c89604aaeab8224342bcd8f3901ceddda29\",\"urls\":[\"bzz-raw://8df29fa7d7990fb4bba16cdf7ce4ff08eb80e16a85c611b18142e3b2d2850e62\",\"dweb:/ipfs/QmYhyJAmWToj8CdFR6Wwomq15Upmx1d5iF1k2Sf6UqXWUS\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
@@ -8232,7 +8212,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-06-21T16:29:10.369Z",
+  "updatedAt": "2022-06-21T16:29:10.372Z",
   "devdoc": {
     "methods": {}
   },

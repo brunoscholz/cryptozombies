@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.5.0 <=0.8.15;
+pragma solidity >=0.5.0 <0.6.0;
 
-import "@openzeppelin/contracts/math/SafeMath.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "./SafeMath.sol";
+import "./Ownable.sol";
 import "./SafeMath.sol";
 
 contract ZombieFactory is Ownable {
@@ -39,7 +39,7 @@ contract ZombieFactory is Ownable {
     emit NewZombie(id, _name, _dna);
   }
 
-  function _generateRandomDna(string memory _str) private view returns (uint) {
+  function _generateRandomDna(string memory _str) public view returns (uint) {
     uint rand = uint(keccak256(abi.encodePacked(_str)));
     return rand % dnaModulus;
   }

@@ -78,8 +78,9 @@ export const loadContract = async (wallet, network, dispatch) => {
   }
 }
 
-export const transformCharacterData = char => {
+export const transformCharacterData = (id, char) => {
   return {
+    id: id,
     name: char.name,
     level: char.level,
     dna: char.dna.toString(),
@@ -90,10 +91,11 @@ export const transformCharacterData = char => {
 }
 
 export const loadArmy = async (account, contract, dispatch) => {
+  console.log(account)
   const characters = await contract.getZombiesByOwner(account)
   const army = await Promise.all(characters.map(async id => {
     const z = await contract.zombies(id.toNumber())
-    const zombie = transformCharacterData(z)
+    const zombie = transformCharacterData(id.toNumber(), z)
     return zombie
   }))
 
@@ -103,9 +105,10 @@ export const loadArmy = async (account, contract, dispatch) => {
 
 export const subscribeToEvents = async (wallet, contract, dispatch) => {
   contract.on('NewZombie', async (zombieId, name, dna) => {
+    if (zombieId === 0) return
     console.log(`New Zombie Created - ID: ${zombieId} name: ${name} DNA: ${dna}`)
     const z = await contract.zombies(zombieId.toNumber())
-    const zombie = transformCharacterData(z)
+    const zombie = transformCharacterData(zombieId, z)
     dispatch({ type: 'ZOMBIE_CREATED', payload: zombie })
   })
 

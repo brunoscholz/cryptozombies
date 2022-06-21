@@ -42,8 +42,8 @@ module.exports = {
           `https://rinkeby.infura.io/v3/${process.env.INFURA_ID}`
         );
       },
-      // gas: 5000000,
-      // gasPrice: 5000000000, // 5 gwei
+      gas: 5000000,
+      gasPrice: 5000000000, // 5 gwei
       network_id: 4,
       skipDryRun: true,
     },
@@ -101,7 +101,7 @@ module.exports = {
 
   compilers: {
     solc: {
-      version: ">=0.6.0 <0.8.0",
+      version: ">=0.5.0 <0.6.0",
       optimizer: {
         enabled: true,
         runs: 200,
